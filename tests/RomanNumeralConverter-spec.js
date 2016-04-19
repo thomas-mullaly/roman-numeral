@@ -16,5 +16,11 @@ describe("RomanNumeralConverter", function () {
 
             result.should.equal("I");
         });
+
+        it("should return II for 2", function () {
+            let result = converter.convertToRomanNumerals(2);
+
+            result.should.equal("II");
+        });
     });
 });
