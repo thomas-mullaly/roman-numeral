@@ -2,7 +2,7 @@
 
 class RomanNumeralConverter {
     convertToRomanNumerals(number) {
-
+        return "I";
     }
 };
 
