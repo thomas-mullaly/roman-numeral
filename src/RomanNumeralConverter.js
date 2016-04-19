@@ -2,13 +2,16 @@
 
 class RomanNumeralConverter {
     convertToRomanNumerals(number) {
-        if (number === 1) {
-            return "I";
-        } else if (number === 2) {
-            return "II";
-        } else if (number === 3) {
-            return "III";
+        let i = number;
+        let result = "";
+
+        while (i > 0) {
+            result += "I";
+
+            i -= 1;
         }
+
+        return result;
     }
 };
 
