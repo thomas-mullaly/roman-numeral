@@ -3,5 +3,12 @@
   "version": "1.0.0",
   "description": "Roman numeral coding kata",
   "author": "Thomas Mullaly",
-  "license": "ISC"
+  "license": "ISC",
+  "scripts": {
+      "test": "mocha tests/*-spec.js"
+  },
+  "devDependencies": {
+    "mocha": "^2.4.5",
+    "should": "^8.3.1"
+  }
 }
