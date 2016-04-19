@@ -2,7 +2,11 @@
 
 class RomanNumeralConverter {
     convertToRomanNumerals(number) {
-        return "I";
+        if (number === 1) {
+            return "I";
+        } else if (number === 2) {
+            return "II";
+        }
     }
 };
 
