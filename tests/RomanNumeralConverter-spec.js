@@ -22,5 +22,11 @@ describe("RomanNumeralConverter", function () {
 
             result.should.equal("II");
         });
+
+        it ("should return III for 3", function () {
+            let result = converter.convertToRomanNumerals(3);
+
+            result.should.equal("III");
+        });
     });
 });
