@@ -6,9 +6,13 @@ class RomanNumeralConverter {
         let result = "";
 
         while (i > 0) {
-            result += "I";
-
-            i -= 1;
+            if (i === 4) {
+                result += "IV";
+                i -= 4;
+            } else {
+                result += "I";
+                i -= 1;
+            }
         }
 
         return result;
