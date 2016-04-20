@@ -88,5 +88,11 @@ describe("RomanNumeralConverter", function () {
 
             result.should.equal("XXXI");
         });
+
+        it("should return XL for 40", function () {
+            let result = converter.convertToRomanNumerals(40);
+
+            result.should.equal("XL");
+        });
     });
 });
