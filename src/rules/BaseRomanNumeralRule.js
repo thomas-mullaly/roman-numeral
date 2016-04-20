@@ -2,11 +2,11 @@
 
 class BaseRomanNumeralRule {
     constructor(arabicNumber) {
-
+        this._arabicNumber = arabicNumber;
     }
 
     get arabicNumber() {
-        return null;
+        return this._arabicNumber;
     }
 }
 
