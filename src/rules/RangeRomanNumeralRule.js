@@ -3,12 +3,14 @@
 let BaseRomanNumeralRule = require("./BaseRomanNumeralRule");
 
 class RangeRomanNumeralRule extends BaseRomanNumeralRule {
-    constructor(arabicNumber, numeral) {
+    constructor(arabicNumber, numeral, rangeStart) {
         super(arabicNumber, numeral);
+
+        this._rangeStart = rangeStart;
     }
 
-    applies() {
-
+    applies(number) {
+        return number >= this._rangeStart;
     }
 }
 
