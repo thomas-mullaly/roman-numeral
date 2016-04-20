@@ -172,5 +172,11 @@ describe("RomanNumeralConverter", function () {
 
             result.should.equal("D");
         });
+
+        it("should return CM for 900", function () {
+            let result = converter.convertToRomanNumerals(900);
+
+            result.should.equal("CM");
+        });
     });
 });
