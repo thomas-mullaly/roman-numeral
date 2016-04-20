@@ -166,5 +166,11 @@ describe("RomanNumeralConverter", function () {
 
             result.should.equal("CDXCIX");
         });
+
+        it("should return D for 500", function () {
+            let result = converter.convertToRomanNumerals(500);
+
+            result.should.equal("D");
+        });
     });
 });
