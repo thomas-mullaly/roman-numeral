@@ -178,5 +178,11 @@ describe("RomanNumeralConverter", function () {
 
             result.should.equal("CM");
         });
+
+        it("should return M for 1000", function () {
+            let result = converter.convertToRomanNumerals(1000);
+
+            result.should.equal("M");
+        });
     });
 });
