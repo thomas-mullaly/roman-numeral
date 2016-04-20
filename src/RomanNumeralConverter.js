@@ -12,7 +12,7 @@ const romanNumeralRules = [
         arabicNumber: 40,
         numeral: "XL",
         applies: (number) => {
-            return number < 50 && number >= 40;
+            return number >= 40 && number < 50;
         }
     },
     {
