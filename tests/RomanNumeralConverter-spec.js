@@ -130,5 +130,11 @@ describe("RomanNumeralConverter", function () {
 
             result.should.equal("XC");
         });
+
+        it("should return XCIX for 99", function () {
+            let result = converter.convertToRomanNumerals(99);
+
+            result.should.equal("XCIX");
+        });
     });
 });
