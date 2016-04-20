@@ -136,5 +136,11 @@ describe("RomanNumeralConverter", function () {
 
             result.should.equal("XCIX");
         });
+
+        it("should return C for 100", function () {
+            let result = converter.convertToRomanNumerals(100);
+
+            result.should.equal("C");
+        });
     });
 });
