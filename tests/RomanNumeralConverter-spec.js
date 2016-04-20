@@ -112,5 +112,23 @@ describe("RomanNumeralConverter", function () {
 
             result.should.equal("L");
         });
+
+        it("should return LXXV for 75", function () {
+            let result = converter.convertToRomanNumerals(75);
+
+            result.should.equal("LXXV");
+        });
+
+        it("should return LXXXIX for 89", function () {
+            let result = converter.convertToRomanNumerals(89);
+
+            result.should.equal("LXXXIX");
+        });
+
+        it("should return XC for 90", function () {
+            let result = converter.convertToRomanNumerals(90);
+
+            result.should.equal("XC");
+        });
     });
 });
