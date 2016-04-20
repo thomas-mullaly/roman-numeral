@@ -7,8 +7,8 @@ class ExactRomanNumeralRule extends BaseRomanNumeralRule {
         super(arabicNumber, numeral);
     }
 
-    applies() {
-
+    applies(number) {
+        return false;
     }
 }
 
