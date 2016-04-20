@@ -1,0 +1,18 @@
+"use strict";
+
+let should = require("should");
+let GeneralRomanNumeralRule = require("../../src/rules/GeneralRomanNumeralRule");
+
+describe("GeneralRomanNumeralRule", function () {
+    describe("applies", function () {
+        let rule = null;
+
+        beforeEach(function () {
+            rule = new GeneralRomanNumeralRule(10, "X");
+        });
+
+        it("should return false if number is less than arabicNumber", function () {
+            rule.applies(6).should.equal(false);
+        });
+    });
+});
