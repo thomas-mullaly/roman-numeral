@@ -1,97 +1,23 @@
 "use strict";
 
+let GeneralRomanNumeralRule = require("./rules/GeneralRomanNumeralRule");
+let ExactRomanNumeralRule = require("./rules/ExactRomanNumeralRule");
+let RangeRomanNumeralRule = require("./rules/RangeRomanNumeralRule");
+
 const romanNumeralRules = [
-    {
-        arabicNumber: 1000,
-        numeral: "M",
-        applies: (number) => {
-            return number >= 1000;
-        }
-    },
-    {
-        arabicNumber: 900,
-        numeral: "CM",
-        applies: (number) => {
-            return number >= 900 && number < 1000;
-        }
-    },
-    {
-        arabicNumber: 500,
-        numeral: "D",
-        applies: (number) => {
-            return number >= 500;
-        }
-    },
-    {
-        arabicNumber: 400,
-        numeral: "CD",
-        applies: (number) => {
-            return number >= 400 && number < 500;
-        }
-    },
-    {
-        arabicNumber: 100,
-        numeral: "C",
-        applies: (number) => {
-            return number >= 100;
-        }
-    },
-    {
-        arabicNumber: 90,
-        numeral: "XC",
-        applies: (number) => {
-            return number >= 90 && number < 100;
-        }
-    },
-    {
-        arabicNumber: 50,
-        numeral: "L",
-        applies: (number) => {
-            return number >= 50;
-        }
-    },
-    {
-        arabicNumber: 40,
-        numeral: "XL",
-        applies: (number) => {
-            return number >= 40 && number < 50;
-        }
-    },
-    {
-        arabicNumber: 10,
-        numeral: "X",
-        applies: (number) => {
-            return number >= 10;
-        }
-    },
-    {
-        arabicNumber: 9,
-        numeral: "IX",
-        applies: (number) => {
-            return number === 9;
-        }
-    },
-    {
-        arabicNumber: 5,
-        numeral: "V",
-        applies: (number) => {
-            return number >= 5;
-        }
-    },
-    {
-        arabicNumber: 4,
-        numeral: "IV",
-        applies: (number) => {
-            return number === 4;
-        }
-    },
-    {
-        arabicNumber: 1,
-        numeral: "I",
-        applies: (number) => {
-            return true;
-        }
-    }
+    new GeneralRomanNumeralRule(1000, "M"),
+    new RangeRomanNumeralRule(900, "CM", 900, 1000),
+    new GeneralRomanNumeralRule(500, "D"),
+    new RangeRomanNumeralRule(400, "CD", 400, 500),
+    new GeneralRomanNumeralRule(100, "C"),
+    new RangeRomanNumeralRule(90, "XC", 90, 100),
+    new GeneralRomanNumeralRule(50, "L"),
+    new RangeRomanNumeralRule(40, "XL", 40, 50),
+    new GeneralRomanNumeralRule(10, "X"),
+    new ExactRomanNumeralRule(9, "IX"),
+    new GeneralRomanNumeralRule(5, "V"),
+    new ExactRomanNumeralRule(4, "IV"),
+    new GeneralRomanNumeralRule(1, "I")
 ];
 
 class RomanNumeralConverter {
