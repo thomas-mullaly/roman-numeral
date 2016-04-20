@@ -1,26 +1,57 @@
 "use strict";
 
+const romanNumeralRules = [
+    {
+        arabicNumber: 10,
+        numeral: "X",
+        applies: (number) => {
+            return number >= 10;
+        }
+    },
+    {
+        arabicNumber: 9,
+        numeral: "IX",
+        applies: (number) => {
+            return number === 9;
+        }
+    },
+    {
+        arabicNumber: 5,
+        numeral: "V",
+        applies: (number) => {
+            return number >= 5;
+        }
+    },
+    {
+        arabicNumber: 4,
+        numeral: "IV",
+        applies: (number) => {
+            return number === 4;
+        }
+    },
+    {
+        arabicNumber: 1,
+        numeral: "I",
+        applies: (number) => {
+            return true;
+        }
+    }
+];
+
 class RomanNumeralConverter {
     convertToRomanNumerals(number) {
         let i = number;
         let result = "";
 
         while (i > 0) {
-            if (i >= 10) {
-                result += "X";
-                i -= 10;
-            } else if (i === 9) {
-                result += "IX";
-                i -= 9;
-            } else if (i >= 5) {
-                result += "V";
-                i -= 5;
-            } else if (i === 4) {
-                result += "IV";
-                i -= 4;
-            } else {
-                result += "I";
-                i -= 1;
+            for (var rule of romanNumeralRules) {
+                if (!rule.applies(i)) {
+                    continue;
+                }
+
+                result += rule.numeral;
+                i -= rule.arabicNumber;
+                break;
             }
         }
 
