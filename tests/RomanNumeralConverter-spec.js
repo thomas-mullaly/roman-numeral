@@ -184,5 +184,17 @@ describe("RomanNumeralConverter", function () {
 
             result.should.equal("M");
         });
+
+        it("should return MMMCMXLIV for 3944", function () {
+            let result = converter.convertToRomanNumerals(3944);
+
+            result.should.equal("MMMCMXLIV");
+        });
+
+        it("should return MCMLXXXIX for 1989", function () {
+            let result = converter.convertToRomanNumerals(1989);
+
+            result.should.equal("MCMLXXXIX");
+        });
     });
 });
