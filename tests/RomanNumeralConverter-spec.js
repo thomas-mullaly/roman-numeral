@@ -28,5 +28,11 @@ describe("RomanNumeralConverter", function () {
 
             result.should.equal("III");
         });
+
+        it("should return IV for 4", function () {
+            let result = converter.convertToRomanNumerals(4);
+
+            result.should.equal("IV");
+        });
     });
 });
