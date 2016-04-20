@@ -46,5 +46,11 @@ describe("RomanNumeralConverter", function () {
 
             result.should.equal("VIII");
         });
+
+        it("should return X for 10", function () {
+            let result = converter.convertToRomanNumerals(10);
+
+            result.should.equal("X");
+        });
     });
 });
