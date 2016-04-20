@@ -154,5 +154,17 @@ describe("RomanNumeralConverter", function () {
 
             result.should.equal("CD");
         });
+
+        it("should return CDXLIV for 444", function () {
+            let result = converter.convertToRomanNumerals(444);
+
+            result.should.equal("CDXLIV");
+        });
+
+        it("should return CDXCIX for 499", function () {
+            let result = converter.convertToRomanNumerals(499);
+
+            result.should.equal("CDXCIX");
+        });
     });
 });
