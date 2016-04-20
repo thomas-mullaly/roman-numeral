@@ -14,5 +14,9 @@ describe("GeneralRomanNumeralRule", function () {
         it("should return false if number is less than arabicNumber", function () {
             rule.applies(6).should.equal(false);
         });
+
+        it("should return true if number is greater than arabicNumber", function () {
+            rule.applies(11).should.equal(true);
+        });
     });
 });
