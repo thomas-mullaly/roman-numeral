@@ -142,5 +142,11 @@ describe("RomanNumeralConverter", function () {
 
             result.should.equal("C");
         });
+
+        it("should return CCCXCIX for 399", function () {
+            let result = converter.convertToRomanNumerals(399);
+
+            result.should.equal("CCCXCIX");
+        });
     });
 });
