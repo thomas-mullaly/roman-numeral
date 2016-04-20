@@ -94,5 +94,17 @@ describe("RomanNumeralConverter", function () {
 
             result.should.equal("XL");
         });
+
+        it("should return XLIV for 44", function () {
+            let result = converter.convertToRomanNumerals(44);
+
+            result.should.equal("XLIV");
+        });
+
+        it("should return XLIX for 49", function () {
+            let result = converter.convertToRomanNumerals(49);
+
+            result.should.equal("XLIX");
+        });
     });
 });
