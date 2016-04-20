@@ -5,7 +5,7 @@
   "author": "Thomas Mullaly",
   "license": "ISC",
   "scripts": {
-      "test": "mocha tests/*-spec.js"
+      "test": "mocha 'tests/**/*-spec.js'"
   },
   "devDependencies": {
     "mocha": "^2.4.5",
