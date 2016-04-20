@@ -148,5 +148,11 @@ describe("RomanNumeralConverter", function () {
 
             result.should.equal("CCCXCIX");
         });
+
+        it("should return CD for 400", function () {
+            let result = converter.convertToRomanNumerals(400);
+
+            result.should.equal("CD");
+        });
     });
 });
