@@ -6,7 +6,7 @@ class RomanNumeralConverter {
         let result = "";
 
         while (i > 0) {
-            if (i === 5) {
+            if (i >= 5) {
                 result += "V";
                 i -= 5;
             } else if (i === 4) {
