@@ -7,7 +7,7 @@ describe("BaseRomanNumeralRule", function () {
     let baseRule = null;
 
     beforeEach(function () {
-        baseRule = new BaseRomanNumeralRule(10);
+        baseRule = new BaseRomanNumeralRule(10, "X");
     });
 
     describe("arabicNumber", function () {
@@ -15,4 +15,10 @@ describe("BaseRomanNumeralRule", function () {
             baseRule.arabicNumber.should.equal(10);
         });
     });
+
+    describe("numeral", function () {
+        it("should return X", function () {
+            baseRule.numeral.should.equal("X");
+        });
+    })
 });
