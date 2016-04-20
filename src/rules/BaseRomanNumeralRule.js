@@ -15,6 +15,7 @@ class BaseRomanNumeralRule {
     }
 
     applies(number) {
+        throw new Error("applies must be implemented by derived rules");
     }
 }
 
