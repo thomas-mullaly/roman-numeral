@@ -9,6 +9,9 @@ class RomanNumeralConverter {
             if (i >= 10) {
                 result += "X";
                 i -= 10;
+            } else if (i === 9) {
+                result += "IX";
+                i -= 9;
             } else if (i >= 5) {
                 result += "V";
                 i -= 5;
