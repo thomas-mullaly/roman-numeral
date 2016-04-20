@@ -106,5 +106,11 @@ describe("RomanNumeralConverter", function () {
 
             result.should.equal("XLIX");
         });
+
+        it("should return L for 50", function () {
+            let result = converter.convertToRomanNumerals(50);
+
+            result.should.equal("L");
+        });
     });
 });
