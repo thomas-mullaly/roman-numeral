@@ -2,6 +2,13 @@
 
 const romanNumeralRules = [
     {
+        arabicNumber: 900,
+        numeral: "CM",
+        applies: (number) => {
+            return number >= 900 && number < 1000;
+        }
+    },
+    {
         arabicNumber: 500,
         numeral: "D",
         applies: (number) => {
