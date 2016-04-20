@@ -14,5 +14,9 @@ describe("ExactRomanNumeralRule", function () {
         it("should return false if number does not match arabicNumber", function () {
             rule.applies(10).should.equal(false);
         });
+
+        it("should return true if number matches arabicNumber", function () {
+            rule.applies(9).should.equal(true);
+        })
     });
 })
