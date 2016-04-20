@@ -58,5 +58,35 @@ describe("RomanNumeralConverter", function () {
 
             result.should.equal("IX");
         });
+
+        it("should return XV for 15", function () {
+            let result = converter.convertToRomanNumerals(15);
+
+            result.should.equal("XV");
+        });
+
+        it("should return XIV for 14", function () {
+            let result = converter.convertToRomanNumerals(14);
+
+            result.should.equal("XIV");
+        });
+
+        it("should return XIX for 19", function () {
+            let result = converter.convertToRomanNumerals(19);
+
+            result.should.equal("XIX");
+        });
+
+        it("should return XVII for 17", function () {
+            let result = converter.convertToRomanNumerals(17);
+
+            result.should.equal("XVII");
+        });
+
+        it("should return XXXI for 31", function () {
+            let result = converter.convertToRomanNumerals(31);
+
+            result.should.equal("XXXI");
+        });
     });
 });
