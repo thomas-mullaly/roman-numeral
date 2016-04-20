@@ -34,5 +34,11 @@ describe("RomanNumeralConverter", function () {
 
             result.should.equal("IV");
         });
+
+        it("should return V for 5", function () {
+            let result = converter.convertToRomanNumerals(5);
+
+            result.should.equal("V");
+        });
     });
 });
