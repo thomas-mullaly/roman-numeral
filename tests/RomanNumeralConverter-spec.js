@@ -52,5 +52,11 @@ describe("RomanNumeralConverter", function () {
 
             result.should.equal("X");
         });
+
+        it("should return IX for 9", function () {
+            let result = converter.convertToRomanNumerals(9);
+
+            result.should.equal("IX");
+        });
     });
 });
