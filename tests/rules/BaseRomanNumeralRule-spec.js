@@ -20,5 +20,11 @@ describe("BaseRomanNumeralRule", function () {
         it("should return X", function () {
             baseRule.numeral.should.equal("X");
         });
-    })
+    });
+
+    describe("applies", function () {
+        it("should throw error", function () {
+            baseRule.applies.should.throw();
+        })
+    });
 });

@@ -13,6 +13,9 @@ class BaseRomanNumeralRule {
     get numeral() {
         return this._numeral;
     }
+
+    applies(number) {
+    }
 }
 
 module.exports = BaseRomanNumeralRule;
