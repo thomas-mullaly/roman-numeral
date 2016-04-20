@@ -8,7 +8,7 @@ class ExactRomanNumeralRule extends BaseRomanNumeralRule {
     }
 
     applies(number) {
-        return false;
+        return this._arabicNumber === number;
     }
 }
 
